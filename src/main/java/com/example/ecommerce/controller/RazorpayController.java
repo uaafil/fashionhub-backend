@@ -17,7 +17,7 @@ public class RazorpayController {
     public Map<String, Object> createOrder(@RequestBody Map<String, Object> data) throws Exception {
         int amount = (int) data.get("amount");
 
-        RazorpayClient client = new RazorpayClient("KEY", "SECRET");
+        RazorpayClient client = new RazorpayClient("razorpay.key_id", "razorpay.key_secret");
 
         JSONObject orderRequest = new JSONObject();
         orderRequest.put("amount", amount); // in paise
